@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <h2>Check Temperature</h2>
+
+    <form method="POST">
+      <label>Select date:</label>
+      <input type="date" name="date" required />
+      <button type="submit">Get Weather</button>
+    </form>
+
+    {% if temp %}
+    <h3>Date: {{ date }}</h3>
+    <h3>Temperature: {{ temp }} °C</h3>
+    {% endif %}
+  </body>
+</html>
